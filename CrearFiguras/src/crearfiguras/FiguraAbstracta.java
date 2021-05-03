@@ -29,6 +29,8 @@ public abstract class FiguraAbstracta implements IFigura {
     protected int Area;
     
     protected int Perimetro;
+    
+    protected String Nombre;
 
     public void asignarColorBorde(String color) throws IOException {
         switch (color.toLowerCase()){
@@ -125,7 +127,7 @@ public abstract class FiguraAbstracta implements IFigura {
      * @param area
      */
     public void asignarArea(int area) {
-        // TODO implement here
+        this.Area = area;
     }
 
     /**
@@ -149,6 +151,18 @@ public abstract class FiguraAbstracta implements IFigura {
     public int obtenerPerimetro() {
         // TODO implement here
         return 0;
+    }
+    
+    public void asignarNombre(String nombre) {
+        // TODO implement here
+    }
+
+    /**
+     * @return
+     */
+    public String obtenerNombre() {
+        // TODO implement here
+        return "";
     }
 
     /**
@@ -184,6 +198,12 @@ public abstract class FiguraAbstracta implements IFigura {
      * @param CoordenadaY
      */
     public void exportarCoordenadasFigura(int CoordenadaX, int CoordenadaY) {
+        // TODO implement here
+    }
+    public void calcularArea(FiguraAbstracta Figura) {
+    }
+    
+    public void calcularPerimetro(FiguraAbstracta Figura) {
         // TODO implement here
     }
 

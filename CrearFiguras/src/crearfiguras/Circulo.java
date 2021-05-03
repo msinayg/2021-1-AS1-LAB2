@@ -10,6 +10,7 @@ import java.util.*;
 public class Circulo extends FiguraAbstracta {
 
     public Circulo() throws IOException {
+        this.asignarNombre("CIRCULO");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Por favor ingrese el radio: ");
         String radio = br.readLine();
@@ -18,8 +19,11 @@ public class Circulo extends FiguraAbstracta {
         String unidades = br.readLine();
         if (unidades.equals("cm") || unidades.equals("pulg")) {
             this.asignarUnidadMedida(unidades);
-        
-            System.out.println("desea agregar color del borde ? si/no");
+            
+        } else {
+            this.asignarUnidadMedida("cm");
+        }
+        System.out.println("desea agregar color del borde ? si/no");
             String resp1 = br.readLine();
             this.asignarColorBorde(resp1);
 
@@ -27,7 +31,6 @@ public class Circulo extends FiguraAbstracta {
             String resp2 = br.readLine();
             this.asignarColorFondo(resp2);
             
-        }
         System.out.println("desea imprimir ? si/no");
         String resp3 = br.readLine();
         switch(resp3){
@@ -39,6 +42,8 @@ public class Circulo extends FiguraAbstracta {
                 break;
         }
         
+        this.calcularArea(this.obtenerRadio());
+        this.calcularPerimetro(this.obtenerRadio());
 
     }
     
@@ -51,6 +56,15 @@ public class Circulo extends FiguraAbstracta {
     public int obtenerRadio() {
     
         return 0;
+    }
+
+    public double calcularArea(int radio) {
+        return 3.1416 * (radio * radio);
+    }
+
+    
+    public double calcularPerimetro(int radio) {
+        return 2 * 3.1416 * radio;
     }
 
 }

@@ -31,5 +31,9 @@ public interface IFigura {
      * @param CoordenadaY
      */
     public void exportarCoordenadasFigura(int CoordenadaX, int CoordenadaY);
+    
+    public void calcularArea(FiguraAbstracta Figura);
+    
+    public void calcularPerimetro(FiguraAbstracta Figura);
 
 }
