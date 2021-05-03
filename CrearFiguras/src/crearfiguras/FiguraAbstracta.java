@@ -162,7 +162,7 @@ public abstract class FiguraAbstracta implements IFigura {
      * @param Figura
      */
     public void imprimirFigura(FiguraAbstracta Figura) {
-        System.out.println("imprimiendo....");
+        System.out.println("imprimiendo...." + "un" + "");
     }
 
     /**
